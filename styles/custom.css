@@ -32,7 +32,7 @@ article {
 }
 
 .ch-slideshow-note {
-  min-height: 0;
+  min-height: 0 !important;
   overflow: hidden;
 }
 
