@@ -1,5 +1,5 @@
 {
-  "name": "code",
+  "name": "theres-more-to-console-than-log",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@code-hike/mdx": "^0.7.5-next.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@mantine/core": "^5.6.2",
+    "@mantine/form": "^5.6.2",
+    "@mantine/hooks": "^5.6.2",
+    "@mantine/next": "^5.6.2",
+    "@mdx-js/loader": "^2.1.5",
+    "@next/mdx": "^13.0.0",
+    "@tabler/icons": "^1.108.0",
     "next": "13.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"

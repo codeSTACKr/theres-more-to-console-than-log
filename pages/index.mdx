@@ -1,0 +1,773 @@
+import { Button } from '@mantine/core';
+import { IconPlayerPlay } from '@tabler/icons';
+
+export const consoleLog1 = () => {
+  let x = 1;
+  console.log(x);
+}
+export const consoleLog2 = () => {
+  let x = 1;
+  let y = 2;
+  let z = 3;
+  console.log(x, y, z);
+}
+export const consoleLog3 = () => {
+  let x = 1;
+  let y = 2;
+  let z = 3;
+  console.log("x: ", x, "y: ", y, "z: ", z);
+}
+export const consoleLog4 = () => {
+  let x = 1;
+  let y = 2;
+  let z = 3;
+  console.log({x, y, z});
+}
+export const consoleLog5 = () => {
+  let user = {
+    name: "Jesse",
+    twitter: "@codeSTACKr",
+    loves: "vs code",
+  };
+  console.log(user);
+}
+export const consoleLog6 = () => {
+  let user = {
+    name: "Jesse",
+    twitter: "@codeSTACKr",
+    loves: "vs code",
+  };
+  console.log({user});
+}
+export const consoleClear1 = () => {
+  let user = {
+    name: "Jesse",
+    twitter: "@codeSTACKr",
+    loves: "vs code",
+  };
+  console.log({user});
+  console.clear();
+}
+export const consoleClear2 = () => {
+  let user = {
+    name: "Jesse",
+    twitter: "@codeSTACKr",
+    loves: "vs code",
+  };
+  console.log({user});
+  console.clear();
+  console.log({user});
+}
+export const consoleVar1 = () => {
+  console.clear();
+  console.log(
+    "%s is %d years old. And %s is %d years old.",
+    "Jesse",
+    29,
+    "Bob",
+    32
+  );
+}
+export const consoleVar2 = () => {
+  console.clear();
+  console.log(
+    "%s is %d years old. And %s is %d years old.",
+    "Jesse",
+    29,
+    "Bob",
+    32,
+    "This is extra text"
+  );
+}
+export const consoleVariations = () => {
+  console.clear();
+  console.log("Console Log");
+  console.info("Console Info");
+  console.debug("Console Debug");
+  console.warn("Console Warn");
+  console.error("Console Error");
+}
+export const consoleDir1 = () => {
+  console.clear();
+  const heading = document.querySelector("h1");
+  console.log(heading);
+}
+export const consoleDir2 = () => {
+  console.clear();
+  const heading = document.querySelector("h1");
+  console.dir(heading);
+}
+export const consoleAssert1 = () => {
+  console.clear();
+  const isItWorking = false;
+  console.assert(isItWorking, "It's not working!!");
+}
+export const consoleAssert2 = () => {
+  console.clear();
+  const isItWorking = true;
+  console.assert(isItWorking, "It's not working!!");
+}
+export const consoleCount1 = () => {
+  console.clear();
+  for (let i = 0; i < 10; i++) {
+    console.count();
+  }
+}
+export const consoleCount2 = () => {
+  console.clear();
+  for (let i = 0; i < 10; i++) {
+    console.count();
+  }
+  for (let i = 0; i < 10; i++) {
+    console.count();
+  }
+}
+export const consoleCount3 = () => {
+  console.clear();
+  for (let i = 0; i < 10; i++) {
+    console.count();
+  }
+  console.countReset();
+  for (let i = 0; i < 10; i++) {
+    console.count();
+  }
+}
+export const consoleCount4 = () => {
+  console.clear();
+  for (let i = 0; i < 10; i++) {
+    console.count("Count 1");
+  }
+  console.countReset("Count 1");
+}
+export const consoleTime1 = () => {
+  console.clear();
+  console.time();
+  setTimeout(() => {
+    console.timeEnd();
+  }, 5000);
+}
+export const consoleTime2 = () => {
+  console.clear();
+  console.time();
+  setTimeout(() => {
+    console.timeEnd();
+  }, 5000);
+  setTimeout(() => {
+    console.timeLog();
+  }, 2000);
+}
+export const consoleGroup1 = () => {
+  console.clear();
+  console.log("I am not in a group");
+  console.group();
+  console.log("I am in a group");
+  console.log("I am also in a group");
+}
+export const consoleGroup2 = () => {
+  console.clear();
+  console.log("I am not in a group");
+  console.group();
+  console.log("I am in a group");
+  console.log("I am also in a group");
+  console.groupEnd();
+  console.log("I am not in a group");
+}
+export const consoleGroup3 = () => {
+  console.clear();
+  console.log("I am not in a group");
+  console.group("Awesome Group");
+  console.log("I am in a group");
+  console.log("I am also in a group");
+  console.groupEnd();
+  console.log("I am not in a group");
+}
+export const consoleGroup4 = () => {
+  console.clear();
+  console.log("I am not in a group");
+  console.groupCollapsed("Awesome Group");
+  console.log("I am in a group");
+  console.log("I am also in a group");
+  console.groupEnd();
+  console.log("I am not in a group");
+}
+export const consoleTrace1 = () => {
+  console.clear();
+  function one() {
+    two();
+  }
+  function two() {
+    three();
+  }
+  function three() {
+    console.trace();
+  }
+  one();
+}
+export const consoleTable1 = () => {
+  console.clear();
+  fetch("/api/data")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+  });
+}
+export const consoleTable2 = () => {
+  console.clear();
+  fetch("/api/data")
+  .then((res) => res.json())
+  .then((data) => {
+    console.table(data);
+  });
+}
+export const consoleTable3 = () => {
+  console.clear();
+  fetch("/api/data")
+  .then((res) => res.json())
+  .then((data) => {
+    console.table(data, "title");
+  });
+}
+export const consoleTable4 = () => {
+  console.clear();
+  fetch("/api/data")
+  .then((res) => res.json())
+  .then((data) => {
+    console.table(data, ["title", "year"]);
+  });
+}
+export const consoleStyle1 = () => {
+  console.clear();
+  console.log(
+    "%cThis is red text on a purple background.",
+    "color:red; background-color:purple"
+  );
+}
+export const consoleStyle2 = () => {
+  console.clear();
+  console.log(
+    "%c Auth ",
+    "color: white; background-color: blue",
+    "User Has Logged In"
+  );
+}
+export const consoleStyle3 = () => {
+  console.clear();
+  console.log(
+    "%c MongoDB ",
+    "color: white; background-color: green",
+    "User Data Recieved"
+  );
+}
+export const consoleStyle4 = () => {
+  console.clear();
+  console.log(
+    "%c Error ",
+    "color: white; background-color: red; font-weight: bold; font-size: 2rem",
+    "Error Getting User Data"
+  );
+}
+
+# There's more to `console` than `.log()`
+
+Let's see all of the `console` methods in action!<br /><em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+
+<CH.Slideshow>
+
+```js
+// console.log()
+
+let x = 1;
+console.log(x);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog1}>RUN</Button>
+
+---
+
+```js
+// console.log()
+
+let x = 1;
+let y = 2;
+let z = 3;
+console.log(x, y, z);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog2}>RUN</Button>
+
+---
+
+```js
+// console.log()
+
+let x = 1;
+let y = 2;
+let z = 3;
+console.log("x: ", x, "y: ", y, "z: ", z);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog3}>RUN</Button>
+
+---
+
+```js
+// console.log()
+
+let x = 1;
+let y = 2;
+let z = 3;
+console.log({x, y, z});
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog4}>RUN</Button>
+
+---
+
+```js
+// console.log()
+
+let user = {
+  name: "Jesse",
+  twitter: "@codeSTACKr",
+  loves: "vs code",
+};
+console.log(user);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog5}>RUN</Button>
+
+---
+
+```js
+// console.log()
+
+let user = {
+  name: "Jesse",
+  twitter: "@codeSTACKr",
+  loves: "vs code",
+};
+console.log({user});
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog6}>RUN</Button>
+
+---
+
+```js
+// console.clear()
+
+let user = {
+  name: "Jesse",
+  twitter: "@codeSTACKr",
+  loves: "vs code",
+};
+console.log({user});
+
+console.clear();
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleClear1}>RUN</Button>
+
+---
+
+```js
+// console.clear()
+
+let user = {
+  name: "Jesse",
+  twitter: "@codeSTACKr",
+  loves: "vs code",
+};
+console.log({user});
+
+console.clear();
+
+console.log({user});
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleClear2}>RUN</Button>
+
+---
+
+```js
+// variables
+
+console.log(
+  "%s is %d years old. And %s is %d years old.",
+  "Jesse",
+  29,
+  "Bob",
+  32
+);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleVar1}>RUN</Button>
+
+---
+
+```js
+// variables
+
+console.log(
+  "%s is %d years old. And %s is %d years old.",
+  "Jesse",
+  29,
+  "Bob",
+  32,
+  "This is extra text"
+);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleVar2}>RUN</Button>
+
+---
+
+```js
+// Log variations
+
+console.log("Console Log");
+console.info("Console Info");
+console.debug("Console Debug");
+console.warn("Console Warn");
+console.error("Console Error");
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleVariations}>RUN</Button>
+
+---
+
+```js
+// console.dir()
+
+const heading = document.querySelector("h1");
+console.log(heading);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleDir1}>RUN</Button>
+
+---
+
+```js
+// console.dir()
+
+const heading = document.querySelector("h1");
+console.dir(heading);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleDir2}>RUN</Button>
+
+---
+
+```js
+// console.assert()
+
+const isItWorking = false;
+console.assert(isItWorking, "It's not working!!");
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleAssert1}>RUN</Button>
+
+---
+
+```js
+// console.assert()
+
+const isItWorking = true;
+console.assert(isItWorking, "It's not working!!");
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleAssert2}>RUN</Button>
+
+---
+
+```js
+// console.count()
+
+for (let i = 0; i < 10; i++) {
+  console.count();
+}
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleCount1}>RUN</Button>
+
+---
+
+```js
+// console.count()
+
+for (let i = 0; i < 10; i++) {
+  console.count();
+}
+
+for (let i = 0; i < 10; i++) {
+  console.count();
+}
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleCount2}>RUN</Button>
+
+---
+
+```js
+// console.count()
+
+for (let i = 0; i < 10; i++) {
+  console.count();
+}
+
+console.countReset();
+
+for (let i = 0; i < 10; i++) {
+  console.count();
+}
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleCount3}>RUN</Button>
+
+---
+
+```js
+// console.count()
+
+for (let i = 0; i < 10; i++) {
+  console.count("Count 1");
+}
+
+console.countReset("Count 1");
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleCount4}>RUN</Button>
+
+---
+
+```js
+// console.time()
+
+console.time();
+
+setTimeout(() => {
+  console.timeEnd();
+}, 5000);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTime1}>RUN</Button>
+
+---
+
+```js
+// console.time()
+
+console.time();
+
+setTimeout(() => {
+  console.timeEnd();
+}, 5000);
+
+setTimeout(() => {
+  console.timeLog();
+}, 2000);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTime2}>RUN</Button>
+
+---
+
+```js
+// console.group()
+
+console.log("I am not in a group");
+
+console.group();
+console.log("I am in a group");
+console.log("I am also in a group");
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleGroup1}>RUN</Button>
+
+---
+
+```js
+// console.group()
+
+console.log("I am not in a group");
+
+console.group();
+console.log("I am in a group");
+console.log("I am also in a group");
+
+console.groupEnd();
+console.log("I am not in a group");
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleGroup2}>RUN</Button>
+
+---
+
+```js
+// console.group()
+
+console.log("I am not in a group");
+
+console.group("Awesome Group");
+console.log("I am in a group");
+console.log("I am also in a group");
+
+console.groupEnd();
+console.log("I am not in a group");
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleGroup3}>RUN</Button>
+
+---
+
+```js
+// console.group()
+
+console.log("I am not in a group");
+
+console.groupCollapsed("Awesome Group");
+console.log("I am in a group");
+console.log("I am also in a group");
+
+console.groupEnd();
+console.log("I am not in a group");
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleGroup4}>RUN</Button>
+
+---
+
+```js
+// console.trace()
+
+function one() {
+  two();
+}
+function two() {
+  three();
+}
+function three() {
+  console.trace();
+}
+one();
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTrace1}>RUN</Button>
+
+---
+
+```js
+// console.table()
+
+fetch("/api/data")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+  });
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTable1}>RUN</Button>
+
+---
+
+```js
+// console.table()
+
+fetch("/api/data")
+  .then((res) => res.json())
+  .then((data) => {
+    console.table(data);
+  });
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTable2}>RUN</Button>
+
+---
+
+```js
+// console.table()
+
+fetch("/api/data")
+  .then((res) => res.json())
+  .then((data) => {
+    console.table(data, "title");
+  });
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTable3}>RUN</Button>
+
+---
+
+```js
+// console.table()
+
+fetch("/api/data")
+  .then((res) => res.json())
+  .then((data) => {
+    console.table(data, ["title", "year"]);
+  });
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTable4}>RUN</Button>
+
+---
+
+```js
+// STYLE 💅
+
+console.log(
+  "%cThis is red text on a purple background.",
+  "color:red; background-color:purple"
+);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleStyle1}>RUN</Button>
+
+---
+
+```js
+// STYLE 💅
+
+console.log(
+  "%c Auth ",
+  "color: white; background-color: blue",
+  "User Has Logged In"
+);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleStyle2}>RUN</Button>
+
+---
+
+```js
+// STYLE 💅
+
+console.log(
+  "%c MongoDB ",
+  "color: white; background-color: green",
+  "User Data Recieved"
+);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleStyle3}>RUN</Button>
+
+---
+
+```js
+// STYLE 💅
+
+console.log(
+  "%c Error ",
+  `color: white; 
+    background-color: red; 
+    font-weight: bold; 
+    font-size: 2rem`,
+  "Error Getting User Data"
+);
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleStyle4}>RUN</Button>
+
+---
+
+</CH.Slideshow>
