@@ -14,4 +14,7 @@ module.exports = withMDX({
   eslint: { ignoreDuringBuilds: true },
   reactStrictMode: true,
   swcMinify: false,
+  optimization: {
+    minimize: false
+  }
 })
