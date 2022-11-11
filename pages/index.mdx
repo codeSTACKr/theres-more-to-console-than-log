@@ -266,6 +266,14 @@ export const consoleStyle4 = () => {
     "Error Getting User Data"
   );
 }
+export const consoleDebugger = () => {
+  console.clear();
+  let random = Math.floor(Math.random() * 10);
+  for(let i=0; i<5; i++){
+    random = Math.floor(Math.random() * 10);
+    debugger
+  }
+}
 
 # There's more to `console` than `.log()`
 
@@ -282,7 +290,7 @@ console.log(x);
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -297,7 +305,7 @@ console.log(x, y, z);
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog2}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -312,7 +320,7 @@ console.log("x: ", x, "y: ", y, "z: ", z);
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog3}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -327,7 +335,7 @@ console.log({x, y, z});
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog4}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -344,7 +352,7 @@ console.log(user);
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog5}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -361,7 +369,7 @@ console.log({user});
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleLog6}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -380,7 +388,7 @@ console.clear();
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleClear1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -401,7 +409,7 @@ console.log({user});
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleClear2}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -419,7 +427,7 @@ console.log(
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleVar1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -438,7 +446,7 @@ console.log(
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleVar2}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -454,7 +462,7 @@ console.error("Console Error");
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleVariations}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -467,7 +475,7 @@ console.log(heading);
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleDir1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -480,7 +488,7 @@ console.dir(heading);
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleDir2}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -493,7 +501,7 @@ console.assert(isItWorking, "It's not working!!");
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleAssert1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -506,7 +514,7 @@ console.assert(isItWorking, "It's not working!!");
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleAssert2}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -520,7 +528,7 @@ for (let i = 0; i < 10; i++) {
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleCount1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -538,7 +546,7 @@ for (let i = 0; i < 10; i++) {
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleCount2}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -558,7 +566,7 @@ for (let i = 0; i < 10; i++) {
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleCount3}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -574,7 +582,7 @@ console.countReset("Count 1");
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleCount4}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -590,7 +598,7 @@ setTimeout(() => {
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTime1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -610,7 +618,7 @@ setTimeout(() => {
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTime2}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -626,7 +634,7 @@ console.log("I am also in a group");
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleGroup1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -645,7 +653,7 @@ console.log("I am not in a group");
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleGroup2}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -664,7 +672,7 @@ console.log("I am not in a group");
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleGroup3}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -683,7 +691,7 @@ console.log("I am not in a group");
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleGroup4}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -704,7 +712,7 @@ one();
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTrace1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -720,7 +728,7 @@ fetch("/api/data")
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTable1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -736,7 +744,7 @@ fetch("/api/data")
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTable2}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -752,7 +760,7 @@ fetch("/api/data")
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTable3}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -768,7 +776,7 @@ fetch("/api/data")
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleTable4}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -783,7 +791,7 @@ console.log(
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleStyle1}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -799,7 +807,7 @@ console.log(
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleStyle2}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -815,7 +823,7 @@ console.log(
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleStyle3}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
@@ -834,7 +842,24 @@ console.log(
 
 <Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleStyle4}>RUN</Button>
 
-<em>Note: Be sure to open the developer console (Ctrl/CMD + Shift + J)</em>
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
+
+---
+
+```js
+// DEBUGGER
+
+let random = Math.floor(Math.random() * 10);
+
+for(let i=0; i<5; i++){
+  random = Math.floor(Math.random() * 10);
+  debugger
+}
+```
+
+<Button sx={{width: "100%", marginTop: "1rem"}} rightIcon={<IconPlayerPlay size={14} />} onClick={consoleDebugger}>RUN</Button>
+
+<em>Note: Be sure to open the developer console (Shift + CTRL + J or Option + CMD + J)</em>
 
 ---
 
