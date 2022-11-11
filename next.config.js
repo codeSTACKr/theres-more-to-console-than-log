@@ -11,13 +11,6 @@ const withMDX = require("@next/mdx")({
 module.exports = withMDX({
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   eslint: { ignoreDuringBuilds: true },
-  reactStrictMode: false,
-  swcMinify: false,
-  webpack: function (config, options) {
-    options.dev = true
-    config.mode = 'development'
-    console.log(config.mode);
-    
-    return config;
-  }
+  reactStrictMode: true,
+  swcMinify: true,
 });
