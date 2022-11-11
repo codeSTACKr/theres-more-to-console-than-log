@@ -14,6 +14,7 @@ module.exports = withMDX({
   reactStrictMode: false,
   swcMinify: false,
   webpack: function (config, options) {
+    options.dev = true
     config.mode = 'development'
     console.log(config.mode);
     
