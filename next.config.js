@@ -13,8 +13,11 @@ module.exports = withMDX({
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   eslint: { ignoreDuringBuilds: true },
   reactStrictMode: true,
-  swcMinify: false,
-  optimization: {
-    minimize: false
-  }
+  swcMinify: true,
+  webpack: (
+    config,
+    { buildId, dev = true, isServer, defaultLoaders, nextRuntime, webpack }
+  ) => {
+    return config
+  },
 })
