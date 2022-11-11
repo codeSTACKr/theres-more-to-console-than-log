@@ -13,8 +13,10 @@ module.exports = withMDX({
   eslint: { ignoreDuringBuilds: true },
   reactStrictMode: false,
   swcMinify: false,
-  optimization: {
-    minimize: false,
-  },
-  mode: 'development',
+  webpack: function (config, options) {
+    config.mode = 'development'
+    console.log(config.mode);
+    
+    return config;
+  }
 });
